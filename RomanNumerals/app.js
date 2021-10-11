@@ -15,7 +15,8 @@ const C = 100
 const CD = 400
 const D = 500
 
-const num = { I: 1, IV: 4, V: 5 }
+const num = { I: 1, IV: 4, V: 5, IX: 9, X: 10, XL: 40, L: 50, C: 100, CD: 400, D: 500 }
+const numTwo = { I: "I", IV: "IV", V: "V", IX: "IX", X: "X", XL: "XL", L: "L", C: "C", CD: "CD", D: "D" }
 
 //console.log(num.IV)
 
@@ -39,40 +40,39 @@ function checkRoman(inPutText) {
         romanNumber[i] = inPutText.toUpperCase().charAt(i);
     }
     postRoman(countNumbers(romanNumber))
+    //hello()
 }
 
 function countNumbers(romanNumber) {
 
     let arabic = 0
-    let letter = ""
+    //let letter = ""
     for (let i = 0; i < romanNumber.length; i++) {
-        letter = romanNumber[i]
-        if ((romanNumber[i] + romanNumber[i + 1]) === "IV") {
-            console.log(num.IV)
-            //console.log(num.`${ letter }`)
-            arabic = arabic + IV
+        //letter = romanNumber[i]
+        if ((romanNumber[i] + romanNumber[i + 1]) === numTwo[(romanNumber[i] + romanNumber[i + 1])]) {
+            arabic = arabic + num[(romanNumber[i] + romanNumber[i + 1])]
             i++
-        } else if (romanNumber[i] + romanNumber[i + 1] === "IX") {
-            arabic = arabic + IX
-            i++
-        } else if (romanNumber[i] + romanNumber[i + 1] === "XL") {
-            arabic = arabic + XL
-            i++
-        } else if (romanNumber[i] + romanNumber[i + 1] === "CD") {
-            arabic = arabic + CD
-            i++
-        } else if (romanNumber[i] === "I") {
-            arabic = arabic + IV
-        } else if (romanNumber[i] === "V") {
-            arabic = arabic + V
-        } else if (romanNumber[i] === "X") {
-            arabic = arabic + X
-        } else if (romanNumber[i] === "L") {
-            arabic = arabic + L
-        } else if (romanNumber[i] === "C") {
-            arabic = arabic + C
-        } else if (romanNumber[i] === "D") {
-            arabic = arabic + D
+            // } else if (romanNumber[i] + romanNumber[i + 1] === "IX") {
+            //     arabic = arabic + IX
+            //     i++
+            // } else if (romanNumber[i] + romanNumber[i + 1] === "XL") {
+            //     arabic = arabic + XL
+            //     i++
+            // } else if (romanNumber[i] + romanNumber[i + 1] === "CD") {
+            //     arabic = arabic + CD
+            //     i++
+        } else if (romanNumber[i] === numTwo[romanNumber[i]]) {
+            arabic = arabic + num[romanNumber[i]]
+            // } else if (romanNumber[i] === "V") {
+            //     arabic = arabic + num[romanNumber[i]]
+            // } else if (romanNumber[i] === "X") {
+            //     arabic = arabic + num[romanNumber[i]]
+            // } else if (romanNumber[i] === "L") {
+            //     arabic = arabic + num[romanNumber[i]]
+            // } else if (romanNumber[i] === "C") {
+            //     arabic = arabic + num[romanNumber[i]]
+            // } else if (romanNumber[i] === "D") {
+            //     arabic = arabic + num[romanNumber[i]]
         } else alert("Not Valid")
     }
     return arabic
@@ -84,4 +84,13 @@ function postRoman(item) {
 
     postText.innerText = item
     post.prepend(postText)
+}
+
+function hello() {
+    let scope = {
+        a: "hello world",
+        b: "welcom here"
+    };
+    let varName = "b";
+    console.log(scope[varName]); // works
 }

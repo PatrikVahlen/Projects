@@ -62,7 +62,7 @@ function countNumbers(romanNumber) {
             arabic = arabic + CD
             i++
         } else if (romanNumber[i] === "I") {
-            arabic = arabic + I
+            arabic = arabic + IV
         } else if (romanNumber[i] === "V") {
             arabic = arabic + V
         } else if (romanNumber[i] === "X") {

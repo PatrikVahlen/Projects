@@ -4,16 +4,16 @@
 const buttonClick = document.getElementById("onclick")
 const post = document.getElementById("post")
 
-const I = 1
-const IV = 4
-const V = 5
-const IX = 9
-const X = 10
-const XL = 40
-const L = 50
-const C = 100
-const CD = 400
-const D = 500
+// const I = 1
+// const IV = 4
+// const V = 5
+// const IX = 9
+// const X = 10
+// const XL = 40
+// const L = 50
+// const C = 100
+// const CD = 400
+// const D = 500
 
 const num = { I: 1, IV: 4, V: 5, IX: 9, X: 10, XL: 40, L: 50, C: 100, CD: 400, D: 500 }
 const numTwo = { I: "I", IV: "IV", V: "V", IX: "IX", X: "X", XL: "XL", L: "L", C: "C", CD: "CD", D: "D" }
@@ -22,7 +22,7 @@ const numTwo = { I: "I", IV: "IV", V: "V", IX: "IX", X: "X", XL: "XL", L: "L", C
 
 buttonClick.addEventListener("click", function () {
     const inPutText = document.getElementById("input").value
-
+    console.log(typeof (inPutText))
     checkRoman(inPutText)
 })
 
@@ -46,9 +46,7 @@ function checkRoman(inPutText) {
 function countNumbers(romanNumber) {
 
     let arabic = 0
-    //let letter = ""
     for (let i = 0; i < romanNumber.length; i++) {
-        //letter = romanNumber[i]
         if ((romanNumber[i] + romanNumber[i + 1]) === numTwo[(romanNumber[i] + romanNumber[i + 1])]) {
             arabic = arabic + num[(romanNumber[i] + romanNumber[i + 1])]
             i++
@@ -86,11 +84,11 @@ function postRoman(item) {
     post.prepend(postText)
 }
 
-function hello() {
-    let scope = {
-        a: "hello world",
-        b: "welcom here"
-    };
-    let varName = "b";
-    console.log(scope[varName]); // works
-}
+// function hello() {
+//     let scope = {
+//         a: "hello world",
+//         b: "welcom here"
+//     };
+//     let varName = "b";
+//     console.log(scope[varName]); 
+// }

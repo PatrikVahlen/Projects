@@ -2,6 +2,12 @@ body {
     max-width: max-content;
     margin: auto;
     font-family: arial;
+    // background: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1786&q=80)
+    //     no-repeat center center fixed;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
 }
 
 @media screen and (max-width: 1200px) {
@@ -53,18 +59,20 @@ h1 {
     width: 200px;
     height: 200px;
     border-radius: 10px;
+    object-fit: cover;
     // border: solid black 2px;
 }
 .detailpicture {
     width: 200px;
     height: 200px;
-    padding: 10px;
     margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 1s;
 }
-
+// Utökar bilden med 10px motsvarand 200px*1,05
 .detailpicture:hover {
-    width: 210px;
-    height: 210px;
+    transform: scale(1.05);
 }
 
 .detailpicturerow {
@@ -79,6 +87,8 @@ h1 {
 .ceo-picture {
     width: 200px;
     height: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
 }
 
 .form {
@@ -98,5 +108,25 @@ h1 {
 
 .contactblock {
     display: inline-flex;
-    background-color: red;
+}
+
+.btn {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 1s;
+    background-color: white;
+    border: solid black 1px;
+}
+
+.btn:hover {
+    background-color: rgb(226, 221, 221);
+}
+
+#submitMessage {
+    text-align: center;
 }

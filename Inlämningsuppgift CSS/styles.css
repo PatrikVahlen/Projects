@@ -52,18 +52,20 @@ h1 {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .detailpicture {
   width: 200px;
   height: 200px;
-  padding: 10px;
   margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 1s;
 }
 
 .detailpicture:hover {
-  width: 210px;
-  height: 210px;
+  transform: scale(1.05);
 }
 
 .detailpicturerow {
@@ -78,6 +80,8 @@ h1 {
 .ceo-picture {
   width: 200px;
   height: 300px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .form {
@@ -97,7 +101,27 @@ h1 {
 
 .contactblock {
   display: inline-flex;
-  background-color: red;
+}
+
+.btn {
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 1s;
+  background-color: white;
+  border: solid black 1px;
+}
+
+.btn:hover {
+  background-color: #e2dddd;
+}
+
+#submitMessage {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

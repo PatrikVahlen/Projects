@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>About Us</title>
 </head>
@@ -39,25 +41,25 @@
                     mollitia est sint ea nihil quas consequatur quis vero facilis aut placeat inventore optio, commodi
                     aspernatur.</p>
             </div>
-            <div>
+            <div class="contactblock">
                 <div>
                     <img class="ceo-picture"
                         src="https://images.unsplash.com/photo-1618329075618-0d0c6ee9807b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGtuaWdodHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                         alt="">
                 </div>
                 <div class="contactinfo">
-                    <p>Namn</p>
-                    <p>Email</p>
-                    <p>Phone</p>
+                    <p>Name: Lady Black-Hawk</p>
+                    <p><a href="mailto:patrik.vahlen@gmail.com">black_hawk@worldeater.galactic</a></p>
+                    <p><a href="tel:123-456-7890">Phone: +Galactic - 000 123 123</a></p>
                 </div>
             </div>
             <div>
-                <img class=""
+                <img class="imagelogo"
                     src="https://images.unsplash.com/photo-1583118443607-33f3731d09e3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmFudGFzeSUyMHNvbGRpZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                     alt="">
             </div>
-            <div>
-                <form action="" method="get" class="form-example">
+            <div id="hideForm">
+                <form action="" method="get" class="form">
                     <div class="formbox">
                         <label for="name">Enter your name: </label>
                         <input type="text" name="name" id="name" required>
@@ -71,10 +73,11 @@
                         <textarea id="story" name="story" rows="5" cols="33"></textarea>
                     </div>
                     <div class="formbox">
-                        <input type="submit" value="Subscribe!">
+                        <button class="btn" id="submitButton">Submit</button>
                     </div>
                 </form>
             </div>
+            <h4 id=submitMessage></h4>
         </div>
     </div>
 </body>

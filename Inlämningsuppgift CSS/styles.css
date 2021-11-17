@@ -97,6 +97,7 @@ h1 {
 
 .contactblock {
   display: inline-flex;
+  background-color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */

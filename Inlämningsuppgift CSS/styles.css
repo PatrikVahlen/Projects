@@ -1,0 +1,102 @@
+body {
+  max-width: max-content;
+  margin: auto;
+  font-family: arial;
+}
+
+@media screen and (max-width: 1200px) {
+  .imagelogo {
+    display: none;
+  }
+}
+.container-top {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container-middle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation {
+  width: 200px;
+}
+
+.navigation li {
+  list-style: none;
+}
+
+.imagelogo {
+  width: 1000px;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.logo {
+  max-width: 1000px;
+}
+
+.eventframe {
+  border: solid black 2px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.eventpicture {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.detailpicture {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.detailpicture:hover {
+  width: 210px;
+  height: 210px;
+}
+
+.detailpicturerow {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  display: inline-block;
+}
+
+.ceo-picture {
+  width: 200px;
+  height: 300px;
+}
+
+.form {
+  width: 1000px;
+}
+
+.formbox {
+  margin: 10px;
+  padding: 10px;
+  border: solid black 2px;
+  border-radius: 10px;
+}
+
+.formbox textarea {
+  resize: none;
+}
+
+.contactblock {
+  display: inline-flex;
+}
+
+/*# sourceMappingURL=styles.css.map */

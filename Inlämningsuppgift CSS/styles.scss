@@ -1,10 +1,25 @@
 @use "variables";
 
+body {
+    max-width: max-content;
+    margin: auto;
+    font-family: gotham light;
+    color: white;
+    background-color: variables.$backgroundcolorprimary;
+    // background: url(https://images.unsplash.com/photo-1581937019650-bb34507b7d64?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHNwYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=240)
+    //     no-repeat center center fixed;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+}
+
 @mixin linkFormat {
     a {
         outline: none;
         text-decoration: none;
         padding: 2px 1px 0;
+        font-weight: bold;
     }
     a:link {
         color: variables.$linkcolor;
@@ -28,18 +43,13 @@
     }
 }
 
-body {
-    max-width: max-content;
-    margin: auto;
-    font-family: arial;
+@mixin borderDecoration {
+    background-color: variables.$backgroundcolorboxes;
     color: white;
-    background-color: variables.$backgroundcolorprimary;
-    // background: url(https://images.unsplash.com/photo-1581937019650-bb34507b7d64?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHNwYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=240)
-    //     no-repeat center center fixed;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
+    border: none;
+    input:focus {
+        background-color: variables.$backgroundcolorboxes;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -47,43 +57,74 @@ body {
         display: none;
     }
 }
-
-.container-top {
-    display: flex;
+@media screen and (max-width: 1000px) {
+    // nav {
+    //     float: left;
+    // }
+    nav ul {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+    }
+    nav li {
+        display: inline;
+        padding: 0 10px 0 0;
+        float: left;
+        width: 40%;
+        height: auto;
+        font-size: 10px;
+    }
 }
+
+// .container-top {
+//     display: flex;
+// }
 
 h1 {
     text-align: center;
     text-shadow: variables.$textshadow;
 }
 
-h3 {
+h3,
+h4 {
     text-align: center;
 }
 
-.container-middle {
+h2 {
+    margin-top: 50px;
+}
+
+// .container-middle {
+//     display: flex;
+//     flex-wrap: wrap;
+//     @include linkFormat();
+// }
+
+.container-top {
     display: flex;
-    flex-wrap: wrap;
-    @include linkFormat();
-}
-
-.navigation {
-    width: 200px;
-    li {
-        list-style: none;
-        @include linkFormat();
-        margin-bottom: 10px;
+    nav {
+        width: 200px;
+        li {
+            list-style: none;
+            @include linkFormat();
+            margin-bottom: 10px;
+        }
     }
-}
-
-.imagelogo {
-    width: 1000px;
-    height: 500px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.logo {
-    max-width: 1000px;
+    .logo {
+        max-width: 1000px;
+        .imagelogo {
+            width: 1000px;
+            height: 500px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .container-middle {
+            // width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            @include linkFormat();
+        }
+    }
 }
 
 .eventframe {
@@ -91,6 +132,12 @@ h3 {
     padding: 10px;
     margin: 40px;
     box-shadow: variables.$boxshadow;
+    max-width: 220px;
+    .btn {
+        position: relative;
+        top: 0%;
+        left: 20%;
+    }
 }
 
 .eventpicture {
@@ -102,34 +149,45 @@ h3 {
     transition: 1s;
 }
 
-// Utökar bilden med 10px motsvarand 200px*1,05
+// För att utöka bilden med 10px, motsvarande 200px*1,05=210px
 .detailpicturerow {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
     .eventpicture:hover {
-        transform: scale(1.05);
+        transform: scale(1.4);
     }
 }
 
-.ceo-picture {
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
 .formcontainer {
+    // position: relative;
+    // top: 0%;
+    // left: 0%;
+    .btn {
+        position: relative;
+        top: 0%;
+        left: 35%;
+    }
     margin-top: 50px;
     .form {
         box-shadow: variables.$boxshadow;
         display: inline-block;
-        width: 1000px;
         border-radius: 10px;
         .formbox {
             margin: 10px;
             padding: 10px;
             textarea {
                 resize: none;
+                @include borderDecoration();
+                font-family: gotham light;
+            }
+            input {
+                @include borderDecoration();
+                font-family: gotham light;
+            }
+            select {
+                @include borderDecoration();
+                font-family: gotham light;
             }
         }
     }
@@ -138,6 +196,13 @@ h3 {
 .contactblock {
     display: inline-flex;
     @include linkFormat();
+    .ceo-picture {
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
 }
 
 .btn {
@@ -158,6 +223,6 @@ h3 {
     cursor: pointer;
 }
 
-#submitMessage {
-    text-align: center;
-}
+// #submitMessage {
+//     text-align: center;
+// }

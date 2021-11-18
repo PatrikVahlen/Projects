@@ -1,33 +1,62 @@
 $(function () {
     $("#btnOne").on('click', function () {
         console.log("Hej");
-        $("#toggle").slideDown("slow");
-        $("#toggle").text("Short description: Fly in and invade");
+        $("#toggleOne").slideToggle("slow");
+        $("#toggleOne").text("Short description: Fly in and invade");
     })
+
     $("#btnTwo").on('click', function () {
         console.log("Hej");
-        $("#toggle1").slideDown("slow");
-        $("#toggle1").text("Short description: Walk in and invade");
+        $("#toggleTwo").slideDown("slow");
+        $("#toggleTwo").text("Short description: Walk in and invade");
     })
+
     $("#btnThree").on('click', function () {
         console.log("Hej");
-        $("#toggle2").slideDown("slow");
-        $("#toggle2").text("Short description: Walk in and invade");
+        $("#toggleThree").slideDown("slow");
+        $("#toggleThree").text("Short description: Walk in and invade");
     })
+
     $("#btnFour").on('click', function () {
         console.log("Hej");
-        $("#toggle3").slideDown("slow");
-        $("#toggle3").text("Short description: Service our speeders");
+        $("#toggleFour").slideDown("slow");
+        $("#toggleFour").text("Short description: Service our speeders");
     })
+
     $("#btnFive").on('click', function () {
         console.log("Hej");
-        $("#toggle4").slideDown("slow");
-        $("#toggle4").text("Short description: Become an officer");
+        $("#toggleFive").slideDown("slow");
+        $("#toggleFive").text("Short description: Become an officer");
     })
+
     $("#btnSix").on('click', function () {
         console.log("Hej");
-        $("#toggle5").slideDown("slow");
-        $("#toggle5").text("Short description: Walk in and invade");
+        $("#toggleSix").slideDown("slow");
+        $("#toggleSix").text("Short description: Walk in and invade");
+    })
+
+    $("#btnSeven").on('click', function () {
+        console.log("Hej");
+        $("#toggleSeven").slideDown("slow");
+        $("#toggleSeven").text("Short description: Become an officer");
+    })
+
+    $("#btnEight").on('click', function () {
+        console.log("Hej");
+        $("#toggleEight").slideDown("slow");
+        $("#toggleEight").text("Short description: Guard rebel scum");
+    })
+
+    $("#btnNine").on('click', function () {
+        console.log("Hej");
+        $("#toggleNine").slideDown("slow");
+        $("#toggleNine").text("Short description: Service our base");
+    })
+
+    $("#btnTen").on('click', function () {
+        console.log("Hej");
+        $("#toggleTen").slideDown("slow");
+        $("#toggleTen").text("Short description: Program in Cobalt");
     })
 
     $("#submitButton").on('click', function (e) {

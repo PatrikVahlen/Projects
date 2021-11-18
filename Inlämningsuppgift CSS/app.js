@@ -61,7 +61,7 @@ $(function () {
 
     $("#submitButton").on('click', function (e) {
         e.preventDefault();
-        $("#hideForm").hide(1000);
+        $("#hideform").hide(1000);
         $("#submitMessage").slideDown("slow");
         $("#submitMessage").text("Your message has been sent to an intergalactic responder");
     })

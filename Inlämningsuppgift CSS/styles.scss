@@ -76,10 +76,6 @@ body {
     }
 }
 
-// .container-top {
-//     display: flex;
-// }
-
 h1 {
     text-align: center;
     text-shadow: variables.$textshadow;
@@ -93,12 +89,6 @@ h4 {
 h2 {
     margin-top: 50px;
 }
-
-// .container-middle {
-//     display: flex;
-//     flex-wrap: wrap;
-//     @include linkFormat();
-// }
 
 .container-top {
     display: flex;
@@ -133,6 +123,7 @@ h2 {
     margin: 40px;
     box-shadow: variables.$boxshadow;
     max-width: 220px;
+    transition: 1s;
     .btn {
         position: relative;
         top: 0%;
@@ -149,6 +140,10 @@ h2 {
     transition: 1s;
 }
 
+.eventframe:hover {
+    transform: scale(1.1);
+}
+
 // För att utöka bilden med 10px, motsvarande 200px*1,05=210px
 .detailpicturerow {
     display: flex;
@@ -160,9 +155,6 @@ h2 {
 }
 
 .formcontainer {
-    // position: relative;
-    // top: 0%;
-    // left: 0%;
     .btn {
         position: relative;
         top: 0%;
@@ -223,6 +215,7 @@ h2 {
     cursor: pointer;
 }
 
-// #submitMessage {
-//     text-align: center;
-// }
+#hideform {
+    display: flex;
+    justify-content: center;
+}

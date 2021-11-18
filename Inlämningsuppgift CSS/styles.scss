@@ -1,8 +1,40 @@
+@use "variables";
+
+@mixin linkFormat {
+    a {
+        outline: none;
+        text-decoration: none;
+        padding: 2px 1px 0;
+    }
+    a:link {
+        color: variables.$linkcolor;
+    }
+
+    a:visited {
+        color: variables.$linkcolor;
+    }
+
+    a:focus {
+        border-bottom: variables.$linkborderbottom;
+    }
+
+    a:hover {
+        border-bottom: variables.$linkborderbottom;
+        text-shadow: variables.$textshadow;
+    }
+
+    a:active {
+        text-shadow: variables.$textshadow;
+    }
+}
+
 body {
     max-width: max-content;
     margin: auto;
     font-family: arial;
-    // background: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1786&q=80)
+    color: white;
+    background-color: variables.$backgroundcolorprimary;
+    // background: url(https://images.unsplash.com/photo-1581937019650-bb34507b7d64?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHNwYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=240)
     //     no-repeat center center fixed;
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
@@ -22,19 +54,26 @@ body {
 
 h1 {
     text-align: center;
+    text-shadow: variables.$textshadow;
 }
+
+h3 {
+    text-align: center;
+}
+
 .container-middle {
     display: flex;
     flex-wrap: wrap;
+    @include linkFormat();
 }
 
 .navigation {
-    // background-color: green;
     width: 200px;
-}
-
-.navigation li {
-    list-style: none;
+    li {
+        list-style: none;
+        @include linkFormat();
+        margin-bottom: 10px;
+    }
 }
 
 .imagelogo {
@@ -44,44 +83,32 @@ h1 {
     object-fit: cover;
 }
 .logo {
-    // background-color: purple;
     max-width: 1000px;
 }
 
 .eventframe {
-    border: solid black 2px;
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin: 40px;
+    box-shadow: variables.$boxshadow;
 }
 
 .eventpicture {
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    object-fit: cover;
-    // border: solid black 2px;
-}
-.detailpicture {
-    width: 200px;
-    height: 200px;
     margin: 10px;
-    border-radius: 10px;
     object-fit: cover;
     transition: 1s;
 }
-// Utökar bilden med 10px motsvarand 200px*1,05
-.detailpicture:hover {
-    transform: scale(1.05);
-}
 
+// Utökar bilden med 10px motsvarand 200px*1,05
 .detailpicturerow {
     display: flex;
     flex-direction: row;
-}
-
-.form {
-    display: inline-block;
+    .eventpicture:hover {
+        transform: scale(1.05);
+    }
 }
 
 .ceo-picture {
@@ -91,40 +118,44 @@ h1 {
     margin-right: 20px;
 }
 
-.form {
-    width: 1000px;
-}
-
-.formbox {
-    margin: 10px;
-    padding: 10px;
-    border: solid black 2px;
-    border-radius: 10px;
-}
-
-.formbox textarea {
-    resize: none;
+.formcontainer {
+    margin-top: 50px;
+    .form {
+        box-shadow: variables.$boxshadow;
+        display: inline-block;
+        width: 1000px;
+        border-radius: 10px;
+        .formbox {
+            margin: 10px;
+            padding: 10px;
+            textarea {
+                resize: none;
+            }
+        }
+    }
 }
 
 .contactblock {
     display: inline-flex;
+    @include linkFormat();
 }
 
 .btn {
-    padding: 0.35em 1.2em;
-    border: 0.1em solid #ffffff;
-    margin: 0 0.3em 0.3em 0;
+    background: none;
     border-radius: 10px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: 300;
-    transition: 1s;
-    background-color: white;
-    border: solid black 1px;
+    color: #d62222;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
 .btn:hover {
-    background-color: rgb(226, 221, 221);
+    border-color: #e94d4d;
+    color: #e94d4d;
+    box-shadow: variables.$boxshadow;
+    transform: translateY(-0.25em);
+    cursor: pointer;
 }
 
 #submitMessage {

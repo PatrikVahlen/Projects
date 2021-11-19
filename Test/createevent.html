@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Create Event</title>
+</head>
+
+<body>
+    <div class="container-top">
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="allevents.html">All Events</a></li>
+                <li><a href="createevent.html">Create Event</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <h1>Create Event</h1>
+            <div class="formcontainer">
+                <form action="" method="get" class="form">
+                    <div class="formbox">
+                        <label for="name">Enter your name: </label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="formbox">
+                        <label for="date">Date: </label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+                    <div class="formbox">
+                        <label for="story">Short description:</label>
+                        <br>
+                        <textarea id="story" name="story" rows="5" cols="33"></textarea>
+                    </div>
+                    <div class="formbox">
+                        <label for="agenda">Agenda:</label>
+                        <br>
+                        <textarea id="agenda" name="agenda" rows="5" cols="33"></textarea>
+                    </div>
+                    <div class="formbox">
+                        <label for="file">Upload picture: </label>
+                        <input type="file" id="myFile" name="filename" accept="image/*,.pdf">
+                    </div>
+                    <div class="formbox">
+                        <label for="file">Upload picture: </label>
+                        <input type="file" id="myFile" name="filename" accept="image/*,.pdf">
+                    </div>
+                    <div class="formbox">
+                        <label for="file">Upload picture: </label>
+                        <input type="file" id="myFile" name="filename" accept="image/*,.pdf">
+                    </div>
+                    <div class="formbox">
+                        <label for="agenda">Upload picture: </label>
+                        <input type="file" id="myFile" name="filename" accept="image/*,.pdf">
+                    </div>
+                    <div class="formbox">
+                        <label for="category">Choose a category</label>
+                        <select name="category" id="category">
+                            <option value="">Airborne invasion</option>
+                            <option value="">Land assault</option>
+                            <option value="">Maintenance</option>
+                            <option value="">Cadet school</option>
+                        </select>
+                    </div>
+                    <div class="formbox">
+                        <button class="btn" id="submitButton">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

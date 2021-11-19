@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // const txt1 = $("<p></p>").text("HAHA");  // Create text with jQuery
+            // // const atag = $("<a></a>")
+            // const txt = $("<div></div>", { id: "id3", class: "class3" }).text("HEJ");
+            // $(txt).append(txt1);
+            // $("body").append(txt);   // Append new elements
+
+            // const arr = [
+            //     'one',
+            //     'two',
+            //     'three',
+            //     'four',
+            //     'five'
+            // ];
+
+            // $.each({ one: 1, two: 2 }, function (key, value) {
+            //     console.log(this);
+            // });
+
+            // const arr = [
+            //     {
+            //         one: 1,
+            //         two: 2
+            //     }
+            // ];
+
+            const arr = [
+                {
+                    url: "https://images.unsplash.com/photo-1578374173713-32f6ae6f3971?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHN0YXIlMjB3YXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+                    name: "Name: TIE-Fighter",
+                    date: "Date: 2021-12-12",
+                    category: "Category: Airborne invasion",
+                    description: "Short description: Fly in and invade",
+                    link: "details.html",
+                    btnId: "btnOne",
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1578374173713-32f6ae6f3971?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHN0YXIlMjB3YXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+                    name: "Name: TWO-Fighter",
+                    date: "Date: 2021-12-12",
+                    category: "Category: Airborne invasion",
+                    description: "Short description: Walk in and invade",
+                    link: "details.html",
+                    btnId: "btnTwo",
+                }
+            ];
+
+            $.each(arr, function (key, value) {
+                const eventWrapper = $("<div></div>", { id: "eventframe" }).text("");
+                const eventImg = $("<img>", { id: "eventpicture", src: value.url, alt: value.name });
+                const eventName = $("<p></p>").text(value.name);
+                const eventDate = $("<p></p>").text(value.date);
+                const eventCategory = $("<p></p>").text(value.category);
+                const eventId = $("<p></p>").text("");
+                const eventPtag = $("<p></p>").text("");
+                const eventAtag = $("<a></a>", { href: value.link }).text("CLICK");
+                $(eventPtag).append(eventAtag);
+                const eventButton = $("<button></button>", { id: value.btnId, class: "btn" }).text("More info");
+
+                $(eventButton).on('click', function () {
+                    $(eventId).slideToggle("slow");
+                    $(eventId).text(value.description);
+                });
+
+                $(eventWrapper).append(eventImg);
+                $(eventWrapper).append(eventName);
+                $(eventWrapper).append(eventDate);
+                $(eventWrapper).append(eventCategory);
+                $(eventWrapper).append(eventId);
+                $(eventWrapper).append(eventPtag);
+                $(eventWrapper).append(eventButton);
+                $("#container-middle").append(eventWrapper);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="container-middle"></div>
+
+
+</body>
+
+</html>

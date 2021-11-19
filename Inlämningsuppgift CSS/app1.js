@@ -53,42 +53,6 @@ const events = [
         link: "details.html",
         btnId: "btnSix",
     },
-    {
-        url: "https://images.unsplash.com/photo-1533613220915-609f661a6fe1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-        name: "Name: Offcier training",
-        date: "Date: 2021-08-19",
-        category: "Category: Cadet school",
-        description: "Short description: Become an officer",
-        link: "details.html",
-        btnId: "btnSeven",
-    },
-    {
-        url: "https://images.unsplash.com/photo-1616098194857-bc4e312f8904?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA5fHxzdGFyJTIwd2Fyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        name: "Name: Prison duty",
-        date: "Date: 2021-05-13",
-        category: "Category: Maintenance",
-        description: "Short description: Guard rebel scum",
-        link: "details.html",
-        btnId: "btnEight",
-    },
-    {
-        url: "https://images.unsplash.com/photo-1587279484375-eb029be262cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzkwfHxzdGFyJTIwd2Fyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        name: "Name: New frontier",
-        date: "Date: 2021-09-12",
-        category: "Category: Maintenance",
-        description: "Short description: Support our base",
-        link: "details.html",
-        btnId: "btnNine",
-    },
-    {
-        url: "https://images.unsplash.com/photo-1610689096391-801034c438fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjUyfHxzdGFyJTIwd2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        name: "Name: Programming",
-        date: "Date: 2021-12-12",
-        category: "Category: Maintenance",
-        description: "Short description: Program in Cobalt",
-        link: "details.html",
-        btnId: "btnTen",
-    },
 ]
 
 $(function () {

@@ -65,7 +65,7 @@ $(function () {
         const eventCategory = $("<p></p>").text(value.category);
         const eventId = $("<p></p>").text("");
         const eventPtag = $("<p></p>").text("");
-        const eventAtag = $("<a></a>", { href: value.link }).text("CLICK");
+        const eventAtag = $("<a></a>", { href: value.link }).text("Details");
         $(eventPtag).append(eventAtag);
         const eventButton = $("<button></button>", { id: value.btnId, class: "btn" }).text("More info");
 

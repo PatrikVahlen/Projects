@@ -207,7 +207,7 @@ h2 {
 .btn {
     background: none;
     border-radius: 10px;
-    color: #d62222;
+    color: variables.$buttoncolor;
     border: 2px solid;
     padding: 1em 2em;
     font-size: 1em;
@@ -215,8 +215,8 @@ h2 {
 }
 
 .btn:hover {
-    border-color: #e94d4d;
-    color: #e94d4d;
+    border-color: variables.$buttoncolor-hover;
+    color: variables.$buttoncolor-hover;
     box-shadow: variables.$boxshadow;
     transform: translateY(-0.25em);
     cursor: pointer;

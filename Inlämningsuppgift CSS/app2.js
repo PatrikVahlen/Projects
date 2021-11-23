@@ -106,7 +106,7 @@ $(function () {
         const eventButton = $("<button></button>", { id: value.btnId, class: "btn" }).text("More info");
 
         $(eventButton).on('click', function () {
-            $(eventId).slideDown("slow");
+            $(eventId).slideDown("");
             $(eventId).text(value.description);
         });
 

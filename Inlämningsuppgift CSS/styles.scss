@@ -6,13 +6,9 @@ body {
     font-family: gotham light;
     color: white;
     background-color: variables.$backgroundcolorprimary;
-    // background: url(https://images.unsplash.com/photo-1581937019650-bb34507b7d64?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHNwYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=240)
-    //     no-repeat center center fixed;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
 }
+
+// For the links
 
 @mixin linkFormat {
     a {
@@ -43,6 +39,8 @@ body {
     }
 }
 
+// For the input and text-area backgrounds
+
 @mixin borderDecoration {
     background-color: variables.$backgroundcolorboxes;
     color: white;
@@ -52,15 +50,14 @@ body {
     }
 }
 
+// A bit of responsiveness, remove logo and move nav-bar
+
 @media screen and (max-width: 1200px) {
     .imagelogo {
         display: none;
     }
 }
 @media screen and (max-width: 1000px) {
-    // nav {
-    //     float: left;
-    // }
     nav ul {
         position: absolute;
         top: 50px;
@@ -90,6 +87,8 @@ h2 {
     margin-top: 50px;
 }
 
+// For the container and the large pictures/logos
+
 .container-top {
     display: flex;
     nav {
@@ -116,6 +115,8 @@ h2 {
         }
     }
 }
+
+// For the eventpicture and picture in details
 
 .eventframe {
     border-radius: 10px;
@@ -154,6 +155,8 @@ h2 {
     }
 }
 
+// For the forms in createlement and about us
+
 .formcontainer {
     .btn {
         position: relative;
@@ -185,6 +188,8 @@ h2 {
     }
 }
 
+// For the CEO-picture
+
 .contactblock {
     display: inline-flex;
     @include linkFormat();
@@ -196,6 +201,8 @@ h2 {
         margin-bottom: 15px;
     }
 }
+
+// CSS for every button
 
 .btn {
     background: none;
@@ -215,9 +222,9 @@ h2 {
     cursor: pointer;
 }
 
+// For the last form in about us
+
 #hideform {
     display: flex;
     justify-content: center;
 }
-
-// test
